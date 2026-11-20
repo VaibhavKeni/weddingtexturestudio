@@ -1,0 +1,137 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  background: #0a0806;
+  min-height: 600px;
+}
+
+.contact-info {
+  padding: 80px 60px;
+  background: #13100c;
+  border-right: 1px solid #2a2318;
+}
+
+.contact-info h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 400;
+  color: #fff;
+  margin: 0;
+}
+
+.info-items {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.info-item {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.info-icon {
+  font-size: 1.3rem;
+  margin-top: 2px;
+}
+
+.info-item strong {
+  display: block;
+  color: #fff;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.info-item p {
+  color: #8a7f72;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.contact-form-wrap {
+  padding: 80px 60px;
+  display: flex;
+  align-items: center;
+}
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 0.95rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.3s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #c9a84c;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #5a5248;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.success-msg {
+  text-align: center;
+  width: 100%;
+}
+
+.success-msg span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.15);
+  color: #c9a84c;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.success-msg h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.success-msg p {
+  color: #8a7f72;
+  margin: 0 0 28px;
+}
+
+@media (max-width: 900px) {
+  .contact { grid-template-columns: 1fr; }
+  .contact-info { padding: 60px 24px; border-right: none; border-bottom: 1px solid #2a2318; }
+  .contact-form-wrap { padding: 60px 24px; }
+  .form-row { grid-template-columns: 1fr; }
+}

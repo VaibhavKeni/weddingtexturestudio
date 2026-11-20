@@ -1,0 +1,194 @@
+.film-features {
+  padding: 100px 60px;
+  background: #0a0806;
+  text-align: center;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.feature-card {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  padding: 36px 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.feature-card:hover {
+  border-color: #c9a84c;
+  transform: translateY(-4px);
+}
+
+.feat-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 16px;
+}
+
+.feature-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.feature-card p {
+  color: #8a7f72;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.films-showcase {
+  padding: 100px 60px;
+  background: #0d0b08;
+  text-align: center;
+}
+
+.films-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.film-card {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  overflow: hidden;
+  transition: border-color 0.3s;
+}
+
+.film-card:hover { border-color: #c9a84c; }
+
+.film-thumb {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+
+.film-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.film-card:hover .film-thumb img {
+  transform: scale(1.05);
+}
+
+.play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s;
+}
+
+.film-card:hover .play-overlay {
+  background: rgba(0,0,0,0.55);
+}
+
+.play-btn {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(201, 168, 76, 0.9);
+  color: #0a0806;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  padding-left: 4px;
+  transition: transform 0.2s;
+}
+
+.film-card:hover .play-btn {
+  transform: scale(1.1);
+}
+
+.film-duration {
+  position: absolute;
+  bottom: 10px;
+  right: 12px;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 3px 8px;
+}
+
+.film-info {
+  padding: 20px 24px;
+  text-align: left;
+}
+
+.film-info h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 6px;
+}
+
+.film-info p {
+  color: #8a7f72;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.film-packages {
+  padding: 100px 60px;
+  background: #0a0806;
+  text-align: center;
+}
+
+.film-pkg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Reuse package card styles */
+.package-card {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  padding: 40px 32px;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.package-card:hover { border-color: #c9a84c; transform: translateY(-6px); }
+.package-card.popular { border-color: #c9a84c; }
+.popular-badge { position: absolute; top: -14px; background: #c9a84c; color: #0a0806; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; padding: 4px 16px; }
+.package-card h3 { font-family: 'Playfair Display', Georgia, serif; font-size: 1.5rem; font-weight: 400; color: #fff; margin: 0 0 12px; }
+.pkg-price { font-size: 2rem; color: #c9a84c; font-family: 'Playfair Display', Georgia, serif; margin: 0 0 28px; }
+.package-card ul { list-style: none; padding: 0; margin: 0 0 32px; width: 100%; display: flex; flex-direction: column; gap: 12px; }
+.package-card li { display: flex; align-items: center; gap: 10px; color: #8a7f72; font-size: 0.9rem; }
+.package-card li span { color: #c9a84c; font-size: 0.8rem; }
+.package-card .btn-primary { width: 100%; margin-top: auto; }
+
+@media (max-width: 900px) {
+  .film-features, .films-showcase, .film-packages { padding: 70px 24px; }
+  .features-grid { grid-template-columns: repeat(2, 1fr); }
+  .films-grid { grid-template-columns: 1fr; }
+  .film-pkg-grid { grid-template-columns: 1fr; max-width: 400px; }
+}
+
+@media (max-width: 480px) {
+  .features-grid { grid-template-columns: 1fr; }
+}

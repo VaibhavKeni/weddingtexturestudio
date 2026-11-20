@@ -1,0 +1,163 @@
+.locations {
+  padding: 100px 60px;
+  background: #0a0806;
+  text-align: center;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.location-card {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  padding: 36px 24px;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.location-card:hover {
+  border-color: #c9a84c;
+  transform: translateY(-4px);
+}
+
+.loc-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.location-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 10px;
+}
+
+.location-card p {
+  color: #8a7f72;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.couple-gallery {
+  padding: 100px 60px;
+  background: #0d0b08;
+  text-align: center;
+}
+
+.couple-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.couple-item {
+  height: 300px;
+  overflow: hidden;
+}
+
+.couple-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.couple-item:hover img {
+  transform: scale(1.06);
+}
+
+.couple-pricing {
+  padding: 100px 60px;
+  background: #0a0806;
+  text-align: center;
+}
+
+.pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Reuse package card styles from Weddings */
+.package-card {
+  background: #13100c;
+  border: 1px solid #2a2318;
+  padding: 40px 32px;
+  position: relative;
+  transition: border-color 0.3s, transform 0.3s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.package-card:hover { border-color: #c9a84c; transform: translateY(-6px); }
+.package-card.popular { border-color: #c9a84c; }
+
+.popular-badge {
+  position: absolute;
+  top: -14px;
+  background: #c9a84c;
+  color: #0a0806;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 16px;
+}
+
+.package-card h3 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #fff;
+  margin: 0 0 12px;
+}
+
+.pkg-price {
+  font-size: 2rem;
+  color: #c9a84c;
+  font-family: 'Playfair Display', Georgia, serif;
+  margin: 0 0 28px;
+}
+
+.package-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.package-card li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #8a7f72;
+  font-size: 0.9rem;
+}
+
+.package-card li span { color: #c9a84c; font-size: 0.8rem; }
+.package-card .btn-primary { width: 100%; margin-top: auto; }
+
+@media (max-width: 900px) {
+  .locations, .couple-gallery, .couple-pricing { padding: 70px 24px; }
+  .locations-grid { grid-template-columns: repeat(2, 1fr); }
+  .couple-grid { grid-template-columns: repeat(2, 1fr); }
+  .pricing-cards { grid-template-columns: 1fr; max-width: 400px; }
+}
+
+@media (max-width: 480px) {
+  .locations-grid { grid-template-columns: 1fr; }
+}
