@@ -11,7 +11,7 @@ export default function ApiTest() {
     setError(null)
     setResponse(null)
     try {
-      const res = await fetch('http://localhost:3001/api/test')
+      const res = await fetch('/api/test')
       const data = await res.json()
       setResponse(data)
     } catch (err) {
@@ -31,7 +31,7 @@ export default function ApiTest() {
 
           <div className="endpoint-row">
             <span className="method">GET</span>
-            <span className="url">http://localhost:3001/api/test</span>
+            <span className="url">/api/test</span>
           </div>
 
           <button className="btn-primary hit-btn" onClick={hitApi} disabled={loading}>
