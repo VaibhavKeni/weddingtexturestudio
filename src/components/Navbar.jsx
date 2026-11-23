@@ -10,6 +10,7 @@ const links = [
   { label: 'FAQ', path: '/faq' },
   { label: 'About Us', path: '/about' },
   { label: 'Contact Us', path: '/contact' },
+  { label: '⚡ API Test', path: '/api-test' },
 ]
 
 export default function Navbar() {

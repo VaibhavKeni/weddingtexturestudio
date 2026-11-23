@@ -8,6 +8,7 @@ import WeddingFilms from './pages/WeddingFilms'
 import FAQ from './pages/FAQ'
 import AboutPage from './pages/AboutPage'
 import ContactPage from './pages/ContactPage'
+import ApiTest from './pages/ApiTest'
 
 export default function App() {
   return (
@@ -21,6 +22,7 @@ export default function App() {
         <Route path="/faq" element={<FAQ />} />
         <Route path="/about" element={<AboutPage />} />
         <Route path="/contact" element={<ContactPage />} />
+        <Route path="/api-test" element={<ApiTest />} />
       </Routes>
       <Footer />
     </BrowserRouter>
